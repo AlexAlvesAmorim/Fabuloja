@@ -1,20 +1,20 @@
 import { useState } from "react";
-import lacostetshirt from '../assets/lacostetshirt.avif';
-import lacostetshirt2 from '../assets/lacostetshirt2.avif';
-import hugoboss from '../assets/hugoboss.webp';
-import hugoboss2 from '../assets/hugoboss2.webp';
-import eckoUnltd from '../assets/eckoUnltd.webp';
-import eckoUnltd2 from '../assets/eckoUnltd2.webp';
-import nikeSportWear from '../assets/nikeSportWear.webp';
-import nikeSportWear2 from '../assets/nikeSportWear2.webp';
-import adidasEssentials from '../assets/adidasEssentials.webp';
-import adidasEssentials2 from '../assets/adidasEssentials2.webp';
-import calvinKlein from '../assets/calvinKlein.webp';
-import calvinKlein2 from '../assets/calvinKlein2.avif';
-import poloRalphLauren from '../assets/poloRalphLauren.webp';
-import poloRalphLauren2 from '../assets/poloRalphLauren2.avif';
-import oakleyTshirt from '../assets/oakleyTshirt.webp';
-import oakleyTshirt2 from '../assets/oakleyTshirt2.webp';
+import lacostetshirt from '../assets/manvitrine/lacostetshirt.avif';
+import lacostetshirt2 from '../assets/manvitrine/lacostetshirt2.avif';
+import hugoboss from '../assets/manvitrine/hugoboss.webp';
+import hugoboss2 from '../assets/manvitrine/hugoboss2.webp';
+import eckoUnltd from '../assets/manvitrine/eckoUnltd.webp';
+import eckoUnltd2 from '../assets/manvitrine/eckoUnltd2.webp';
+import nikeSportWear from '../assets/manvitrine/nikeSportWear.webp';
+import nikeSportWear2 from '../assets/manvitrine/nikeSportWear2.webp';
+import adidasEssentials from '../assets/manvitrine/adidasEssentials.webp';
+import adidasEssentials2 from '../assets/manvitrine/adidasEssentials2.webp';
+import calvinKlein from '../assets/manvitrine/calvinKlein.webp';
+import calvinKlein2 from '../assets/manvitrine/calvinKlein2.avif';
+import poloRalphLauren from '../assets/manvitrine/poloRalphLauren.webp';
+import poloRalphLauren2 from '../assets/manvitrine/poloRalphLauren2.avif';
+import oakleyTshirt from '../assets/manvitrine/oakleyTshirt.webp';
+import oakleyTshirt2 from '../assets/manvitrine/oakleyTshirt2.webp';
 
 import { ShoppingCart } from "lucide-react";
 
@@ -25,10 +25,10 @@ export default function MainLandingPage() {
     const openModal = (product) => setSelectedProduct(product);
     const closeModal = () => setSelectedProduct(null);
 
-    // Jogar o projeto para o Git, deixar salvo, é claro. (PRIORIDADE ALTA IMPORTANTE)
     // Criar um componente chamado footer, pra "finalizar" a landingpage (MEDIA PRIORIDADE)
     // Complementar a coleção feminina.
     // será que consigo minimizar esses import ? (PRIORIDADE??)
+
     const collections = {
         Masculino: [
             {
@@ -120,7 +120,7 @@ export default function MainLandingPage() {
                  Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
             },
             {
-                id: 14, name: 'Camisa Kalvin Klein', price: 'R$ 97,00',
+                id: 14, name: 'Camisa Calvin Klein', price: 'R$ 97,00',
                 image: calvinKlein2,
                 details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
                  Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
@@ -145,17 +145,120 @@ export default function MainLandingPage() {
         ],
 
         Feminino: [
-            { id: 20, name: 'Look 1', price: 'R$ 90,10' },
-            { id: 21, name: 'Look 2', price: 'R$ 89,00' },
-            { id: 22, name: 'Look 3', price: 'R$ 78,00' },
-            { id: 23, name: 'Look 4', price: 'R$ 97,00' },
-            { id: 24, name: 'Look 5', price: 'R$ 99,00' }
+            {
+                id: 20, name: 'Conjunto boho chic e jeans', price: 'R$ 87,00',
+                image: '/womanvitrine/conjuntobohochicjeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 21, name: 'Conjunto Cropped e jeans', price: 'R$ 90,00',
+                image: '/womanvitrine/conjuntocroppedjeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza` },
+
+
+            {
+                id: 22, name: 'Conjunto Jaqueta Jeans, blusa de trico e saia', price: 'R$ 95,00',
+                image: '/womanvitrine/conjuntojaquetajeansblusasaia.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+
+            {
+                id: 23, name: 'Conjunto Cropped e saia Jeans', price: 'R$ 89,00',
+                image: '/womanvitrine/conjuntocroppedjeanscinto.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 24, name: 'Conjunto Cropped de Trico e short Jeans', price: 'R$ 99,00',
+                image: '/womanvitrine/conjuntocroppedtricoshortjeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+            {
+                id: 25, name: 'Conjunto Cropped Preto e short jeans', price: 'R$ 100,00',
+                image: '/womanvitrine/conjuntocroppedpretojeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+            {
+                id: 26, name: 'Conjunto Jeans', price: 'R$ 97,00',
+                image: '/womanvitrine/conjuntojeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 27, name: 'Conjunto Cropped florido e short jeans', price: 'R$ 89,00',
+                image: '/womanvitrine/conjuntoCroppedFloridojeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+            {
+                id: 28, name: 'Conjunto Cropped Preto, bandana e short jeans', price: 'R$ 87,00',
+                image: '/womanvitrine/conjuntoCroppedBandanaPretoJeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 29, name: 'Conjunto Cropped Amarelo e Saia Jeans', price: 'R$ 90,00',
+                image: '/womanvitrine/conjuntoCroppedAmareloJeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza` },
+
+
+            {
+                id: 30, name: 'Conjunto Cropped preto, Saia Jeans e bolsa bege', price: 'R$ 95,00',
+                image: '/womanvitrine/conjuntoCroppedPretoBolsaBegeJeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+
+            {
+                id: 31, name: 'Conjunto Cropped Listrado e short Jeans', price: 'R$ 89,00',
+                image: '/womanvitrine/conjuntoCroppedListradoJeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 32, name: 'Conjunto Cropped Marrom e short Jeans', price: 'R$ 99,00',
+                image: '/womanvitrine/conjuntoCroppedmarromjeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+            {
+                id: 33, name: 'Conjunto Cropped Azul escuro e short jeans', price: 'R$ 100,00',
+                image: '/womanvitrine/conjuntoCroppedAzuljeans.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+            {
+                id: 34, name: 'Conjunto Bluzinha azul e short listrado', price: 'R$ 97,00',
+                image: '/womanvitrine/conjuntoBlusinhaAzulShortListrado.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
+
+            {
+                id: 35, name: 'Conjunto de Body e short', price: 'R$ 89,00',
+                image: '/womanvitrine/conjuntoBodyBermuda.webp',
+                details: `Aposte em um visual despojado e muito conforto com a Camisa Polo Lacoste Masculina!,
+                 Disponiveis nos tamanhos P, M, G e GG. Cores: Preto, Branco, Vermelho, Cinza`
+            },
         ]
     };
 
     return (
         <div className="landing-page">
-            
+
             {selectedProduct && (
                 <div className="modal-backdrop" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -187,9 +290,9 @@ export default function MainLandingPage() {
                         <h2 className="section-title"> Coleção Fabuloja</h2>
                         <div className="section-description">
                             <p>Elegância e sofisticação para o homem moderno,
-                            <p>Descubra as peças que combinam com seu estilo de qualidade premium.</p>
-                        </p>
-                    </div>
+                                <p>Descubra as peças que combinam com seu estilo de qualidade premium.</p>
+                            </p>
+                        </div>
                     </div>
                     <div className="tabs-container">
                         <div className="tabs-wrapper">

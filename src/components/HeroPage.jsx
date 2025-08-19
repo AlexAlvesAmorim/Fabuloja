@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BackgroundDesktop from '../assets/showcaseimg-desktop.webp';
-import BackgroundMobile from '../assets/showcaseimg-mobile.webp';
+import BackgroundDesktop from '../assets/manvitrine/showcaseimg-desktop.webp';
+import BackgroundMobile from '../assets/manvitrine/showcaseimg-mobile.webp';
 
 const HeroPage = () => {
     const [bgImage, setBgImage] = useState("");
