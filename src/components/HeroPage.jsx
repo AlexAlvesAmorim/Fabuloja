@@ -59,7 +59,7 @@ const heroStyle = {
                     <button className="btn-man" onClick={() => scrollToSection('Masculino')}>
                         Moda Masculina
                     </button>
-                    <button className="btn-woman" onClick={() => scrollToSection('Feminino')}>
+                    <button className="btn-woman" onClick={() => scrollToSection('Feminina')}>
                         Moda Feminina
                     </button>
                     </div>

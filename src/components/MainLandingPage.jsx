@@ -144,7 +144,7 @@ export default function MainLandingPage() {
 
         ],
 
-        Feminino: [
+        Feminina: [
             {
                 id: 20, name: 'Conjunto boho chic e jeans', price: 'R$ 87,00',
                 image: '/womanvitrine/conjuntobohochicjeans.webp',
@@ -299,8 +299,8 @@ export default function MainLandingPage() {
                             <button className={`tab-button ${activeTab === 'Masculino' ? 'active-tab' : 'inactive-tab'}`}
                                 onClick={() => setActiveTab('Masculino')}> Moda Masculino </button>
 
-                            <button className={`tab-button ${activeTab === 'Feminino' ? 'active-tab' : 'inactive-tab'}`}
-                                onClick={() => setActiveTab('Feminino')}> Moda Feminino </button>
+                            <button className={`tab-button ${activeTab === 'Feminina' ? 'active-tab' : 'inactive-tab'}`}
+                                onClick={() => setActiveTab('Feminina')}> Moda Feminina </button>
                         </div>
                     </div>
 
