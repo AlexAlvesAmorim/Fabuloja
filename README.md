@@ -1,6 +1,7 @@
-Olá, Eu me chamo Alex e esse é o doc. desse trabalho em react.
+Olá, eu me chamo Alex e este é o documento deste trabalho em React.
 
-Usei react js devido ao meu recente aprendizado sobre JAVASCRIPT pelo qual estudei por 12 meses.
+Usei React.js devido ao meu recente aprendizado sobre JavaScript, pelo qual estudei por 12 meses.
 
-Esse é um projeto "by my self" criei utilizando LLM como suporte mas não como refatorador de codigo,
-usando a penas para reler o documento da linguagem pra mim, e verificar em qual situação eu poderia melhorar.
+Este é um projeto "by myself", criado por mim utilizando LLMs como suporte, mas não como refatoradores de código,
+
+usando-os apenas para reler a documentação da linguagem para mim e verificar em que situações eu poderia melhorar.
