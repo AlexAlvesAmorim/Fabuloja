@@ -52,7 +52,7 @@ const heroStyle = {
            <div className="hero-overlay">
             <div className="hero-top-section">
                 <h1 className="Fabulojatitulo">
-                    Fabuloja Modas
+                    Fabulosa Modas
                 </h1>
                 <p className="Estilo">Descubra o melhor estilo para você.</p>
                 <div className="hero-buttons-animation">

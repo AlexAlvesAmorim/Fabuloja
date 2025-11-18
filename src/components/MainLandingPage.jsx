@@ -25,8 +25,6 @@ export default function MainLandingPage() {
     const openModal = (product) => setSelectedProduct(product);
     const closeModal = () => setSelectedProduct(null);
 
-    // Criar um componente chamado footer, pra "finalizar" a landingpage (MEDIA PRIORIDADE)
-    // Complementar a coleção feminina.
     // será que consigo minimizar esses import ? (PRIORIDADE??)
 
     const collections = {
@@ -289,7 +287,7 @@ export default function MainLandingPage() {
                     <div className="section-header">
                         <h2 className="section-title"> Coleção Fabuloja</h2>
                         <div className="section-description">
-                            <p>Elegância e sofisticação para o homem moderno,
+                            <p>A elegância essencial para a moda moderna,
                                 <p>Descubra as peças que combinam com seu estilo de qualidade premium.</p>
                             </p>
                         </div>

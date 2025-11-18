@@ -39,7 +39,7 @@ const NavTopPage = () => {
                     >
 
                         
-                        Fabuloja Modas 
+                        Fabulosa Modas
                     </a>
 
                     <ul className="nav-menu">
