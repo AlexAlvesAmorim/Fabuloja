@@ -1,75 +1,83 @@
 import React, { useState, useEffect } from "react";
-import BackgroundDesktop from '../assets/manvitrine/showcaseimg-desktop.webp';
-import BackgroundMobile from '../assets/manvitrine/showcaseimg-mobile.webp';
+import { ArrowDown } from "lucide-react";
+
+/* O SCROLL TO SECTION TA FUNCIONANDO, FALTA SÓ AJEITAR A ABA ATIVA
+(PESQUISA JA TA NO GROK, É A RESPOSTA?*/
 
 const HeroPage = () => {
-    const [bgImage, setBgImage] = useState("");
-    const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-        const newImage = window.innerWidth < 768 ? BackgroundMobile : BackgroundDesktop;
-        setBgImage(newImage);
+  useEffect(() => {
+    const desktop = new Image();
+    const mobile = new Image();
+    const onLoad = () => {
+      if (desktop.complete && mobile.complete) setIsLoaded(true);
     };
+    desktop.onload = mobile.onload = onLoad;
+    onLoad();
+  }, []);
 
-handleResize ();
+const handleSectionClick = (sectionId) => {
+  document.getElementById(sectionId)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 
-window.addEventListener('resize', handleResize);
-
-return () => window.removeEventListener('resize', handleResize);
-}, []);
-
-useEffect(() => {
-    if (bgImage) {
-        const img = new Image();
-        img.src = bgImage;
-        img.onload = () => setIsLoaded(true);
-    }
-}, [bgImage]);
-
-const scrollToSection = (sectionId) => {
-    const element= document.getElementById(sectionId);
-    if (element) {
-        const offSetTop = element.offsetTop - 80;
-        window.scrollTo({
-            top: offSetTop,
-            behavior: 'smooth',
-            });
-    }
-}
-
-const heroStyle = {
-    backgroundImage: `url(${bgImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
-    opacity: isLoaded ? 1 : 0,
-    transition: 'opacity 0.7s ease-out'
+  if (onselectionchange) {
+    onselectionchange(sectionId);
+  }
 };
 
-    return (
-        <section id="home" className="hero" style={heroStyle}>
-           <div className="hero-overlay">
-            <div className="hero-top-section">
-                <h1 className="Fabulojatitulo">
-                    Fabulosa Modas
-                </h1>
-                <p className="Estilo">Descubra o melhor estilo para você.</p>
-                <div className="hero-buttons-animation">
-                    <button className="btn-man" onClick={() => scrollToSection('Masculino')}>
-                        Moda Masculina
-                    </button>
-                    <button className="btn-woman" onClick={() => scrollToSection('Feminina')}>
-                        Moda Feminina
-                    </button>
-                    </div>
-                </div>
-        <div className="hero-scroll-animation-bounce">
-            ↓
-                </div>
-            </div>
-        </section>
-    );
+
+
+
+  return (
+    <section
+      id="home"
+      className={`relative min-h-screen flex flex-col justify-center items-center text-center transition-opacity duration-1000 mt-20 md:mt-24 ${isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+    >      <picture className="absolute inset-0 -z-10">
+        <source media="(min-width: 768px)" srcSet="/manvitrine/showcaseimg-desktop.webp" />
+        <img
+          src="/manvitrine/showcaseimg-mobile.webp"
+
+          className="w-full h-full object-cover object-top"
+          loading="eager"
+        />
+      </picture>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent -z-10"></div>
+
+      <div className="relative z-10 px-6 max-w-5xl mx-auto">
+        <h1 className="font-sufrimeda text-5xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-indigo-500 to-sky-400 bg-clip-text text-transparent mb-8 tracking-tight drop-shadow-2xl ">
+          Fabulosa Modas
+        </h1>
+
+        <p className="text-xl md:text-3xl lg:text-4xl text-gray-100 font-light mb-12 max-w-3xl mx-auto drop-shadow-lg">
+          Descubra o melhor estilo para você.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <button
+            onClick={() => { document.getElementById('Seção Masculina')?.scrollIntoView({ behavior: 'smooth'}); }}
+            className="group relative overflow-hidden px-12 py-6 rounded-full text-xl font-bold text-slate-900 bg-gradient-to-r from-sky-400 via-teal-400 to-sky-400 bg-[length:200%_auto] transition-all duration-500 hover:bg-right-center hover:shadow-2xl hover:scale-110 active:scale-95 shadow-2xl">
+          
+            <span className="relative z-10 drop-shadow">Ir para Coleção Masculina</span>
+          </button>
+
+          <button
+            onClick={() => { document.getElementById('Seção Feminina')?.scrollIntoView({ behavior: 'smooth'}); }}
+            className="group relative overflow-hidden px-12 py-6 rounded-full text-xl font-bold text-slate-900 bg-gradient-to-r from-sky-400 via-teal-400 to-sky-400 bg-[length:200%_auto] transition-all duration-500 hover:bg-right-center hover:shadow-2xl hover:scale-110 active:scale-95 shadow-2xl">
+            <span className="relative z-10 drop-shadow">Ir para Coleção Feminina</span>
+          </button>
+        </div>
+      </div>
+
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+        <ArrowDown className="w-14 h-14 drop-shadow-2xl" />
+      </div>
+    </section>
+  );
 };
 
 export default HeroPage;

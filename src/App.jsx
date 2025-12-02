@@ -1,31 +1,29 @@
-import './components/modules/NavTopPage.css';
-import './components/modules/Global.css';
-import './components/modules/HeroPage.css';
-import './components/modules/MainLandingPage.css';
-import './components/modules/FooterPage.css';
-
 import HeroPage from './components/HeroPage';
 import MainLandingPage from './components/MainLandingPage';
 import NavTopPage from './components/NavTopPage';
 import FooterPage from './components/FooterPage';
+import AboutPage from './components/AboutPage';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <NavTopPage />
         <HeroPage />
-          <MainLandingPage /> 
-            <FooterPage />
+          <AboutPage />
+            <MainLandingPage /> 
+              <FooterPage />
     </div>
   );
 }
 
 export default App;
 
-// CRIAR IMAGENS DE TRANSIÇÃO DE CONTAINER / EX: UMA IMAGEM QUE VAI FICAR NO FOOTER DO HERO
-// E VAI FAZER A TRANSIÇÃO SUAVE DE UM CONTAINER PRO OUTRO. COM A MESMA COR DO PROXIMO.
 
-// AJEITAR O PROJETO EM TELA CHEIA PARA PC E TELA MINIMAL PARA CEL.
+/* APLICAR AS CORES DO PROJETO AZUL, REMOVER O ROSA (TALVEZ).
 
-//IMPORTANTEEEEE - CRIAR A TRANSIÇÃO ENTRE HERO PAGE ATÉ A COLEÇÃO NO MAINLANDING
+A TELA INICIAL COM A LETRA BRANCA NÃO ESTÁ LEGAL. ESPAÇAMENTO ? TALVEZ ! 
+
+APLICAR A FUNCIONALIDADE MODA MASCULINA E MODA FEMININA ! TALVEZ CLICAR EM MUDAR DE COR ?
+
+AJEITAR O ZOOM DAS IMAGENS, TEM ALGUMAS COM MUITO ZOOM !! */
